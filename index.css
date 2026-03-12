@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --maroon: #7A1E1E;
+  --maroon-dark: #5A1515;
+  --maroon-light: #9B2525;
+  --ivory: #F5F1E8;
+  --ivory-dark: #EDE8D8;
+  --gold: #C9A227;
+  --gold-light: #E0B93A;
+  --charcoal: #2B2B2B;
+  --charcoal-light: #3D3D3D;
+  --white: #FFFFFF;
+  --dark-bg: #0F1117;
+  --dark-card: #1A1D27;
+  --dark-border: #2A2D3A;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities */
+.bg-glass {
+  backdrop-filter: blur(12px);
+  background: rgba(15, 17, 23, 0.85);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.bg-maroon-gradient {
+  background: linear-gradient(160deg, var(--maroon-dark) 0%, var(--maroon) 45%, #5C1A1A 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+}
+
+.shadow-premium {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+}
+
+
+/* Dark Theme Components for ERP */
+.bg-dark-bg {
+  background-color: var(--dark-bg);
+}
+
+.bg-dark-card {
+  background-color: var(--dark-card);
+}
+
+.border-dark-border {
+  border-color: var(--dark-border);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+/* Institutional Font Styles */
+@layer base {
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(122, 30, 30, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 30, 30, 0.5);
+}
